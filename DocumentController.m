@@ -22,7 +22,7 @@ RCT_EXPORT_METHOD(show:(NSDictionary *)args)
     UIViewController *ctrl = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
 
     if (![self.documentController presentOpenInMenuFromRect:ctrl.view.bounds inView:ctrl.view animated:YES]) {
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:@"There are no installed apps that can open this file." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:@"Sinulla ei ole tämän tiedostotyypin avaamiseen soveltuvaa sovellusta asennettuna." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alertView show];
     }
 }
